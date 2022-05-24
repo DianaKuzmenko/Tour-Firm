@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5">
+
+    <display-name>Tour Agency</display-name>
+
+    <session-config>
+        <session-timeout> 10080</session-timeout>
+    </session-config>
+
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.png</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>/images/*</url-pattern> <!--Путь к папке-->
+    </servlet-mapping>
+
+    <servlet>
+    <servlet-name>ProfileServlet</servlet-name>
+    <servlet-class>com.softserve.tourcomp.controller.client.ProfileServlet</servlet-class>
+</servlet>
+
+    <servlet-mapping>
+        <servlet-name>ProfileServlet</servlet-name>
+        <url-pattern>/profile</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>com.softserve.tourcomp.controller.registration.RegisterServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+    <servlet-name>HotelStatsServlet</servlet-name>
+    <servlet-class>com.softserve.tourcomp.controller.stats.HotelStatsServlet</servlet-class>
+</servlet>
+
+    <servlet-mapping>
+        <servlet-name>HotelStatsServlet</servlet-name>
+        <url-pattern>/hotelstats</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>UserStatsServlet</servlet-name>
+        <servlet-class>com.softserve.tourcomp.controller.stats.UserStatsServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UserStatsServlet</servlet-name>
+        <url-pattern>/userstats</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>com.softserve.tourcomp.controller.logout.LogoutServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>BookingsService</servlet-name>
+        <servlet-class>com.softserve.tourcomp.controller.orderdetails.BookingsService</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>BookingsService</servlet-name>
+        <url-pattern>/bookings</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>MakeOrderServlet</servlet-name>
+        <servlet-class>com.softserve.tourcomp.controller.orderdetails.MakeOrderServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>MakeOrderServlet</servlet-name>
+        <url-pattern>/booking</url-pattern>
+    </servlet-mapping>
+</web-app>
