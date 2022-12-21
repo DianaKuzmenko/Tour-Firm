@@ -6,7 +6,7 @@
     <div class="panel-heading">
       <h4 class="panel-title">
         <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-          Rooms
+          Apartments
         </a>
       </h4>
     </div>
@@ -68,7 +68,7 @@
         </a>
       </h4>
     </div>
-    <div id="collapseseven" class="panel-collapse collapse">
+    <div id="collapseseven" class="panell-collapse collapse">
       <div class="panel-body">
           In this area, you can change the description and slided of pictures of the home page. Click <a href="mod_settings/index.php">HERE.</a>
       </div>
